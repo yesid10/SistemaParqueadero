@@ -1,12 +1,94 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Sistema Parqueadero</title>
-</head>
-<body>
-    
-</body>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  </head>
+  <header class="bg-dark">
+    <div class="d-flex justify-content-center p-2">
+        <span class="p-3 text-light h2">Sistema de Parqueadero</span>
+    </div>
+</header>
+
+  <body>
+    <div class="container mt-5">
+        <form class="w-50 mx-auto">
+            <div class="form-group">
+                <label for="propietario">
+                    <strong>Propietario del vehículo:</strong>
+                </label>
+                <input type="text"  id="propieatrio" class="form-control shadow-sm" placeholder="Propietario del vehículo" required>
+            </div>
+
+            <div class="form-group py-3">
+                <label for="modelo">
+                  <strong>Modelo del vehículo:</strong>
+                </label>
+                <input type="text" class="form-control shadow-sm" placeholder="Modelo del vehículo" required>
+            </div>
+
+            <div class="row py-3">
+              <div class="col-5">
+                <label for="placa"><strong>Placa</strong></label>
+                <input type="text" class="form-control shadow-sm" id="placa" placeholder="ABC00A" required>
+              </div>
+              <div class="col-7">
+                <label for="tipo"><strong>Tipo de vehículo</strong></label>
+                <select class="form-control shadow-sm" id="tipo">
+                  <option>Carro</option>
+                  <option>Moto</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="row py-3">
+              <div class="col-4">
+                <label for="entryDate"><strong>Fecha Entrada:</strong></label>
+                <input type="date" class="form-control shadow-sm" id="entryDate" required>
+              </div>
+              
+              <div class="col-4">
+                <label for="inicio"><strong>Hora de inicio</strong></label>
+                <input type="datetime" class="form-control shadow-sm" id="inicio" placeholder="HH:MM" required>
+              </div>
+
+              <div class="col-4">
+                <label for="salida"><strong>Cantidad de horas</strong></label>
+                <input type="datetime" class="form-control shadow-sm" id="salida" placeholder="Horas" required>
+              </div>
+            </div>
+
+            <div id="montos" class="row">
+              <div class="col-4">
+                <label for="valor"><strong>Valor inicial:</strong></label>
+                <input type="text" class="form-control shadow-sm" id="valor" readonly>
+              </div>
+              
+              <div class="col-4">
+                <label for="descuento"><strong>Descuento total:</strong></label>
+                <input type="text" class="form-control shadow-sm" id="descuento" readonly>
+              </div>
+
+              <div class="col-4">
+                <label for="total"><strong>Total a pagar:</strong></label>
+                <input type="text" class="form-control shadow-sm" id="total" readonly>
+              </div>
+            </div>
+
+            <div class="d-flex justify-content-center container my-5">
+              <button class="btn btn-primary" type="button" id="btnCalcula">
+                Calcular
+              </button>
+
+              <button id="btnImprimir" class="btn btn-dark ms-1" type="button">
+                Imprimir
+              </button>
+            </div>
+
+        </form>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+  </body>
 </html>
